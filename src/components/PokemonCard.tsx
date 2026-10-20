@@ -11,7 +11,6 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
   if (pokemon.imgSrc != null) {
     image = <img src={pokemon.imgSrc} alt={pokemon.name} />;
   }
-
   else {
     image = <p>???</p>;
   }
