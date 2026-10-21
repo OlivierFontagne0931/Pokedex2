@@ -1,3 +1,5 @@
+
+
 type PokemonCardProps = {
   pokemon: {
     name: string;
