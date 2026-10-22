@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Pokedex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+------
 
-Currently, two official plugins are available:
+# Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Html, Css, JavaScript, Typescript, React, Vitejs, VScode, Git & GitHub
 
-## React Compiler
+------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Déroulé du projet
 
-## Expanding the ESLint configuration
+- Utilisation de ViteJS pour initialiser une application React et création d'un repository GitHub
+- Création d'une nouvelle branche components.1 pour développer pokemonCard.tsx (import/export...)
+- Création d'une nouvelle branche components.2 pour développer les fonctionnalités de PokemonCard.tsx
+- Création d'une nouvelle branche props.1 pour développer les fonctionnalités liées aux props
+- Création d'une nouvelle branche props.2 pour développer les fonctionnalités liées à TypeScript
+- Utilisation des "state" via un "hook" useState 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+------
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Dificultés rencontrées
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Trouver la bonne syntaxe pour l'ajout de certaines fonctionnalités et où les placer (props,state,import/export)
+- Difficulté avec les Props et les State
+- Erreur de syntaxe et de rédaction du code
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+------
 
-```
+# Historique
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+- 20/10/2026 : Création du Projet + rédaction des premiers fichiers
+- 20/10/2026 : Création des branches sur GitHub via Git
+- 20/10/2026 : Rédaction des fichiers étapes par étapes
+- 21/10/2026 : Commit du projet sur GitHub
+- 22/10/2026 : Rédaction du readme.md + dernier commit sur GitHub
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
