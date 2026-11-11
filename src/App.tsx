@@ -1,8 +1,7 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 import "./App.css";
-
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -11,30 +10,43 @@ const pokemonList = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
+    name: "charmander",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+  },
+  {
+    name: "squirtle",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+  },
+  {
+    name: "pikachu",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+  },
+  {
     name: "mew",
   },
 ];
 
-export default function App() {
+function App() {
   const [pokemonName, setPokemonName] = useState("bulbasaur");
+
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
 
   const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
 
   if (pokemon == null) {
     throw new Error("Invalid pokemon name");
   }
-
   return (
     <div>
-      <nav>
-        <button type="button" onClick={() => setPokemonName("bulbasaur")}>
-          bulbasaur
-        </button>
-        <button type="button" onClick={() => setPokemonName("mew")}>
-          mew
-        </button>
-      </nav>
+      <NavBar setPokemonName={setPokemonName} pokemonList={pokemonList} />
       <PokemonCard pokemon={pokemon} />
     </div>
   );
 }
+
+export default App;

@@ -1,0 +1,50 @@
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  margin: 0;
+  padding: 16px 16px 12px;
+  border-radius: 6px;
+  background: whitesmoke;
+}
+
+.pokemon-img {
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  border-radius: 6px;
+  background: white;
+}
+
+.pokemon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 64px;
+  color: grey;
+}
+
+.pokemon-name {
+  margin-top: 12px;
+  font-size: 26px;
+  color: white;
+}
+
+.pokemon-card.bulbasaur {
+  background: #8be78b;
+}
+.pokemon-card.charmander {
+  background: #ffa07a;
+}
+.pokemon-card.squirtle {
+  background: #a8d8e8;
+}
+.pokemon-card.pikachu {
+  background: #ffd84d;
+}
+.pokemon-card.mew {
+  background: #f4a6d7;
+}
