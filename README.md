@@ -12,7 +12,7 @@
 
 - Utilisation de ViteJS pour initialiser une application React et création d'un repository GitHub
 - Création d'une nouvelle branche rendering-list.1 pour développer les fonctionnalités liées à la génération dynamique de boutons.
-- Personnalisation des composants en appliquand du CSS.
+- Personnalisation des composants en appliquant du CSS.
 - Création d'une nouvelle branche state.2 utilisée pour développer les fonctionnalités liées au partage de state.
 - Création d'un composant NavBar.tsx.
 - Création d'une nouvelle branche events.1. Cette branche sera utilisée pour développer les fonctionnalités liées aux événements.
